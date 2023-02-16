@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from 'react';
-
-import Map from './components/Map';
-import './App.scss';
+import { useEffect, useState } from 'react';
 
 const { kakao } = window;
 
-function App() {
+const Map = () => {
   const [map, setMap] = useState(null);
   useEffect(() => {
     const container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
@@ -40,15 +37,17 @@ function App() {
   }
 
   return (
-    <div className='App'>
-      <h2>Muroom</h2>
-      {/* <Map /> */}
-      <div>
-        <span>근처 역, 지역구 등</span>
-        <button>검색</button>
+    <div>
+      <div id='map' style={{ backgroundColor: 'orange', width: '500px', height: '400px' }}>
+        <button className='level-button' onClick={zoomIn}>
+          +
+        </button>
+        <button className='level-button' onClick={zoomOut}>
+          -
+        </button>
       </div>
     </div>
   );
-}
+};
 
-export default App;
+export default Map;
