@@ -1,9 +1,14 @@
+a{
+  text-decoration: none;
+  color: #F8CB2E;
+}
+
 .navigation {
+  // background-color: #006E7F;
   height: 70px;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
 
   .logo-container {
     height: 100%;
@@ -21,6 +26,23 @@
     .nav-link {
       padding: 10px 15px;
       cursor: pointer;
+    }
+  }
+
+  .search-box-container{
+    padding: 10px 15px;
+    input{
+      border: 1px solid #F8CB2E;
+      border-radius: 0.5rem;
+      height: 2rem;
+      width: 15rem;
+    }
+    button{
+      border: none;
+      background-color: transparent;
+      color: #F8CB2E;
+      margin-left: -4.5rem;
+      font-family: 'Kanit', sans-serif;
     }
   }
 }
