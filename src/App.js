@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import './App.scss';
-import Navigation from './shared/Navigation/Navigation';
+import Navigation from './shared/Navigation/Navigation.component';
 
 function App() {
   return (
