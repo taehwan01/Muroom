@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import './Map.styles.scss';
+
 const { kakao } = window;
 
 const Map = () => {
@@ -37,15 +39,13 @@ const Map = () => {
   }
 
   return (
-    <div>
-      <div id='map' style={{ backgroundColor: 'orange', width: '500px', height: '400px' }}>
-        <button className='level-button' onClick={zoomIn}>
-          +
-        </button>
-        <button className='level-button' onClick={zoomOut}>
-          -
-        </button>
-      </div>
+    <div id='map' style={{ width: '70%', height: 'calc(100vh - 72px)' }}>
+      <button className='level-button' onClick={zoomIn}>
+        +
+      </button>
+      <button className='level-button' onClick={zoomOut}>
+        -
+      </button>
     </div>
   );
 };
