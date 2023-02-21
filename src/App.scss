@@ -16,3 +16,8 @@
   position: relative;
   z-index: 2;
 }
+
+.container-row{
+  display: flex;
+  flex-direction: row;
+}

@@ -4,6 +4,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import './App.scss';
 import Navigation from './shared/Navigation/Navigation.component';
 import Map from './components/Map/Map.component';
+import SideBar from './components/SideBar/SideBar.component';
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
         <Route
           path='/'
           element={
-            <div>
+            <div className='container-row'>
               <Map />
+              <SideBar />
             </div>
           }
         ></Route>
