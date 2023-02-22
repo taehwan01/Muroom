@@ -4,7 +4,8 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import './App.scss';
 import Navigation from './shared/Navigation/Navigation.component';
 import Map from './components/Map/Map.component';
-import SideBar from './components/SideBar/SideBar.component';
+import SideContents from './components/SideContents/SideContents.component';
+import SideContents
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           element={
             <div className='container-row'>
               <Map />
-              <SideBar />
+              <SideContents />
             </div>
           }
         ></Route>
