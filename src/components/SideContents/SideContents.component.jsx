@@ -32,7 +32,7 @@ const DUMMY_DATA = [
 
 const SideContents = () => {
   return (
-    <div className='SideContents'>
+    <div className='SideContents' style={{ width: '30%' }}>
       {DUMMY_DATA.map((room) => {
         return (
           <div key={room.id}>
