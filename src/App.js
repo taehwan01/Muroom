@@ -5,7 +5,6 @@ import './App.scss';
 import Navigation from './shared/Navigation/Navigation.component';
 import Map from './components/Map/Map.component';
 import SideContents from './components/SideContents/SideContents.component';
-import SideContents
 
 function App() {
   return (
