@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './Navigation.styles.scss';
 
@@ -9,12 +10,12 @@ const Navigation = () => {
         Muroom
       </Link>
       <div className='nav-links-container'>
-        <Link className='nav-link' to='/places'>
+        <NavLink className='nav-link' to='/places'>
           PLACES
-        </Link>
-        <Link className='nav-link' to='/map'>
+        </NavLink>
+        <NavLink className='nav-link' to='/map'>
           MAP
-        </Link>
+        </NavLink>
         <form className='search-box-container'>
           <input type='text' />
           <button>SEARCH</button>
