@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import './Map.styles.scss';
+import './KakaoMap.styles.scss';
 
 const { kakao } = window;
 
-const Map = () => {
+const KakaoMap = () => {
   const [map, setMap] = useState(null);
   useEffect(() => {
     const container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
@@ -50,4 +50,4 @@ const Map = () => {
   );
 };
 
-export default Map;
+export default KakaoMap;
