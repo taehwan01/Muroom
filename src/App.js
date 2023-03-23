@@ -5,9 +5,11 @@ import './App.scss';
 import Navigation from './shared/Navigation/Navigation.component';
 
 import SideContents from './components/SideContents/SideContents.component';
-import Home from './Pages/Home';
+import Home from './Pages/Home/Home';
 import Places from './Pages/Places';
 import Map from './Pages/Map';
+import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path='/' element={<Home />}></Route>
           <Route path='/places' element={<Places />}></Route>
           <Route path='/map' element={<Map />}></Route>
+          <Route path='/login' element={<Login />}></Route>
+          <Route path='/register' element={<Register />}></Route>
           <Route path='*' element={<Navigate to='/' replace />} />
         </Routes>
       </div>
