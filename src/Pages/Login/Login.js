@@ -22,7 +22,6 @@ const Login = () => {
                 placeholder='비밀번호 입력'
                 className='login-input'
                 required
-                autoFocus
               />
               <br />
               <button className='login-button'>로그인하기 !</button>

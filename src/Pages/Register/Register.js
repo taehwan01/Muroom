@@ -22,7 +22,6 @@ const Register = () => {
                 placeholder='비밀번호 입력'
                 className='login-input'
                 required
-                autoFocus
               />
               <br />
               <button className='login-button'>회원가입하기 !</button>
