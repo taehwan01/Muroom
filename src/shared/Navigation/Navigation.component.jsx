@@ -16,10 +16,13 @@ const Navigation = () => {
         <NavLink className='nav-link' to='/map'>
           MAP
         </NavLink>
-        <form className='search-box-container'>
+        <NavLink className='nav-link' to='/login'>
+          LOGIN
+        </NavLink>
+        {/* <form className='search-box-container'>
           <input type='text' />
           <button>SEARCH</button>
-        </form>
+        </form> */}
       </div>
     </div>
   );

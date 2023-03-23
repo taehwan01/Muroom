@@ -1,53 +1,62 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
-import './Home.scss';
+import sunflower from '../../images/sunflower.png';
+import './Home.styles.scss';
 
 const dummyBestLists = [
   {
     id: 1,
+    image: sunflower,
     user: 'dummy1',
     location: '동대문역 4호선',
     name: 'BC 뮤직 스튜디오',
   },
   {
     id: 2,
+    image: sunflower,
     user: 'dummy2',
     location: '동대문역 4호선',
     name: 'BC 뮤직 스튜디오',
   },
   {
     id: 3,
+    image: sunflower,
     user: 'dummy3',
     location: '동대문역 4호선',
     name: 'BC 뮤직 스튜디오',
   },
   {
     id: 4,
+    image: sunflower,
     user: 'dummy4',
     location: '동대문역 4호선',
     name: 'BC 뮤직 스튜디오',
   },
   {
     id: 5,
+    image: sunflower,
     user: 'dummy5',
     location: '동대문역 4호선',
     name: 'BC 뮤직 스튜디오',
   },
   {
     id: 6,
+    image: sunflower,
     user: 'dummy6',
     location: '동대문역 4호선',
     name: 'BC 뮤직 스튜디오',
   },
   {
     id: 7,
+    image: sunflower,
     user: 'dummy7',
     location: '동대문역 4호선',
     name: 'BC 뮤직 스튜디오',
   },
   {
     id: 8,
+    image: sunflower,
     user: 'dummy8',
     location: '동대문역 4호선',
     name: 'BC 뮤직 스튜디오',
@@ -72,29 +81,36 @@ const Home = () => {
           </div>
         </div>
         <div className='secondary-contents'>
-          <h2>BEST STUDIOS</h2>
-          <div className='best-lists'>
+          <h2 style={{ marginLeft: '1rem' }}>BEST STUDIOS</h2>
+          <div className='room-lists'>
             {dummyBestLists.map((room) => {
               return (
-                <div key={room.id} style={{ border: '1px solid black' }}>
-                  <h4>{room.name}</h4>
-                  <h5>{room.user}</h5>
-                  <h4>{room.location}</h4>
+                <div key={room.id} style={{ margin: '10px' }}>
+                  <div className='room-image'></div>
+                  <div className='room-info'>
+                    <h4>{room.name}</h4>
+                    <span>
+                      {room.location} - {room.user}
+                    </span>
+                  </div>
                 </div>
               );
             })}
           </div>
         </div>
-        {/* <hr color='black' /> */}
         <div className='secondary-contents'>
-          <h2>PREMIUM STUDIOS</h2>
-          <div className='premium-lists'>
+          <h2 style={{ marginLeft: '1rem' }}>PREMIUM STUDIOS</h2>
+          <div className='room-lists'>
             {dummyBestLists.map((room) => {
               return (
-                <div key={room.id} style={{ border: '1px solid black' }}>
-                  <h4>{room.name}</h4>
-                  <h5>{room.user}</h5>
-                  <h4>{room.location}</h4>
+                <div key={room.id} style={{ margin: '10px' }}>
+                  <div className='room-image'></div>
+                  <div className='room-info'>
+                    <h4>{room.name}</h4>
+                    <span>
+                      {room.location} - {room.user}
+                    </span>
+                  </div>
                 </div>
               );
             })}

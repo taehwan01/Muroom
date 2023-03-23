@@ -11,7 +11,7 @@
 
     // https://pixels.com/featured/music-studio-daniel-photography.html
     // background: radial-gradient( transparent, 90%, black), url("../images/banner.png");
-    background: radial-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4)), url("../images/banner.png");
+    background: radial-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4)), url("../../images/banner.png");
     background-size: cover;
     background-position: center 60%;
     min-height: 50vh;
@@ -43,8 +43,28 @@
 .secondary-contents{
     padding: 2rem 4rem;
     color: white;
-    .best-lists, .premium-lists{
+    .room-lists{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        .room-info{
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        h4{
+            margin: 0;
+        }
     }
+}
+
+.room-image{
+    background: url("../../images/sunflower.png");
+    background-position: center center;
+    background-size: cover;
+    padding: 1rem 1rem 0 1rem;
+    width: 100%;
+    min-height: 12rem;
+    margin-bottom: 0.5rem;
 }
