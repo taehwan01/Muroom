@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 
 import './App.scss';
 import Navigation from './shared/Navigation/Navigation.component';
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className='App'>
       <Navigation />
-      {/* <hr className='navbar-line' /> */}
+      <Toaster />
       <div className='contents'>
         <Routes>
           <Route path='/' element={<Home />}></Route>
