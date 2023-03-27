@@ -1,4 +1,4 @@
-import { useState, createContext, useContext } from 'react';
+import { useState, useEffect, createContext, useContext } from 'react';
 import axios from 'axios';
 
 import { API } from '../config';
@@ -12,6 +12,11 @@ const AuthProvider = ({ children }) => {
     token: '',
     refreshToken: '',
   });
+
+  useEffect(() => {
+    let fromLocalStorage = localStorage.getItem('auth');
+    if (fromLocalStorage) setAuth(JSON.parse(fromLocalStorage));
+  }, []);
 
   axios.defaults.baseURL = API;
 

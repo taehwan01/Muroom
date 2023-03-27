@@ -11,6 +11,7 @@ import Places from './Pages/Places';
 import Map from './Pages/Map';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
+import AccountActivate from './Pages/Auth/AccountActivate';
 
 function App() {
   return (
@@ -24,6 +25,10 @@ function App() {
           <Route path='/map' element={<Map />}></Route>
           <Route path='/login' element={<Login />}></Route>
           <Route path='/register' element={<Register />}></Route>
+          <Route
+            path='/auth/account-activate/:token'
+            element={<AccountActivate />}
+          />
           <Route path='*' element={<Navigate to='/' replace />} />
         </Routes>
       </div>

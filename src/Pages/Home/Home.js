@@ -3,6 +3,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 import sunflower from '../../images/sunflower.png';
 import './Home.styles.scss';
+import { useAuth } from '../../context/auth';
 
 const dummyBestLists = [
   {
@@ -64,9 +65,12 @@ const dummyBestLists = [
 ];
 
 const Home = () => {
+  const [auth, setAuth] = useAuth();
+
   return (
     <>
       <div className='home'>
+        <div>{JSON.stringify(auth, null, 4)}</div>
         <div className='main-banner'>
           <div className='banner-contents'>
             <div className='banner-title'>

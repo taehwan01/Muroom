@@ -24,6 +24,7 @@ const Login = () => {
         toast.error(data.error); // 서버로부터 받은 에러 메시지 출력
       } else {
         setAuth(data);
+        localStorage.setItem('auth', JSON.stringify(data));
         toast.success('로그인 성공, 어서오세요 !');
         navigate('/');
       }

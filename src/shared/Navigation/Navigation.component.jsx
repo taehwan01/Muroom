@@ -1,9 +1,20 @@
-import { Link } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+
+import { useAuth } from '../../context/auth';
 
 import './Navigation.styles.scss';
 
 const Navigation = () => {
+  const [auth, setAuth] = useAuth();
+
+  const navigate = useNavigate();
+
+  const logout = () => {
+    setAuth({ user: null, token: '', refreshToken: '' });
+    localStorage.removeItem('auth');
+    navigate('/login');
+  };
+
   return (
     <div className='navigation'>
       <Link className='logo-container' to='/'>
