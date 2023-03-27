@@ -15,6 +15,9 @@ const Navigation = () => {
     navigate('/login');
   };
 
+  const loggedIn =
+    auth.user !== null && auth.token !== '' && auth.refreshToken !== '';
+
   return (
     <div className='navigation'>
       <Link className='logo-container' to='/'>
@@ -27,9 +30,13 @@ const Navigation = () => {
         <NavLink className='nav-link' to='/map'>
           MAP
         </NavLink>
-        <NavLink className='nav-link' to='/login'>
-          LOGIN
-        </NavLink>
+        {loggedIn ? (
+          <div onClick={logout}>User(드롭메뉴)</div>
+        ) : (
+          <NavLink className='nav-link' to='/login'>
+            LOGIN
+          </NavLink>
+        )}
         {/* <form className='search-box-container'>
           <input type='text' />
           <button>SEARCH</button>
