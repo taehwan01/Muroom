@@ -70,7 +70,7 @@ const Home = () => {
   return (
     <>
       <div className='home'>
-        <div>{JSON.stringify(auth, null, 4)}</div>
+        {/* <div>{JSON.stringify(auth, null, 4)}</div> */}
         <div className='main-banner'>
           <div className='banner-contents'>
             <div className='banner-title'>

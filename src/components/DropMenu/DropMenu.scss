@@ -1,0 +1,28 @@
+.drop-menu{
+    position: relative;
+}
+
+.drop-items{
+    position: absolute;
+    top: 62px;
+    right: 0;
+    width: 120%;
+    display: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    a{
+        display: block;
+        color: white;
+        font-weight: 700;
+    }
+    hr{
+        background-color: white;
+        border: none;
+        height: 1px;
+    }
+}
+
+.drop-items.show{
+    display: block;
+    background-color: #F8A92E;
+}

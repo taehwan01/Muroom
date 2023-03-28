@@ -1,4 +1,5 @@
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import DropMenu from '../../components/DropMenu/DropMenu';
 
 import { useAuth } from '../../context/auth';
 
@@ -6,14 +7,6 @@ import './Navigation.styles.scss';
 
 const Navigation = () => {
   const [auth, setAuth] = useAuth();
-
-  const navigate = useNavigate();
-
-  const logout = () => {
-    setAuth({ user: null, token: '', refreshToken: '' });
-    localStorage.removeItem('auth');
-    navigate('/login');
-  };
 
   const loggedIn =
     auth.user !== null && auth.token !== '' && auth.refreshToken !== '';
@@ -31,7 +24,7 @@ const Navigation = () => {
           MAP
         </NavLink>
         {loggedIn ? (
-          <div onClick={logout}>User(드롭메뉴)</div>
+          <DropMenu />
         ) : (
           <NavLink className='nav-link' to='/login'>
             LOGIN
