@@ -9,7 +9,7 @@
     width: 120%;
     display: none;
     padding: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     a{
         display: block;
         color: white;
@@ -18,7 +18,12 @@
     hr{
         background-color: white;
         border: none;
-        height: 1px;
+        height: 1.5px;
+        margin: 3px;
+        width: 100%;
+    }
+    .logout{
+        font-weight: 700;
     }
 }
 

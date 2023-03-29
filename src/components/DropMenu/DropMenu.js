@@ -42,7 +42,9 @@ const DropMenu = () => {
             <a href='/'>찜 목록</a>
             <a href='/'>대화 내역</a>
             <hr />
-            <div onClick={logout}>로그아웃</div>
+            <div className='logout' onClick={logout}>
+              로그아웃
+            </div>
           </div>
         </>
       ) : (
