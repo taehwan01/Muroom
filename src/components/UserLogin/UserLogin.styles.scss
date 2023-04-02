@@ -14,11 +14,13 @@
             display: grid;
             grid-template-rows: 1fr 5fr 1fr;
             .white-box{
+                box-sizing: border-box;
                 width: 5rem;
                 height: 5rem;
             }
         }
         .login-contents{
+            box-sizing: border-box;
             width: 25rem;
             height: 25rem;
             border: 0.1rem solid white;
