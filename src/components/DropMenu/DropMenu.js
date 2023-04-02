@@ -8,7 +8,7 @@ import {
 
 import { useAuth } from '../../context/auth';
 import './DropMenu.scss';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 
 const DropMenu = () => {
   const [auth, setAuth] = useAuth();
@@ -38,7 +38,8 @@ const DropMenu = () => {
             style={{ color: '#F8A92E', padding: '0.5rem 30px 0 0' }}
           />
           <div className={`drop-items ${dropDown ? 'show' : ''}`}>
-            <a href='/'>내 프로필</a>
+            <NavLink to='/dashboard'>내 프로필</NavLink>
+            {/* <a href='/dashboard'></a> */}
             <a href='/'>찜 목록</a>
             <a href='/'>대화 내역</a>
             <hr />

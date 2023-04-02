@@ -12,6 +12,8 @@ import Map from './Pages/Map';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import AccountActivate from './Pages/Auth/AccountActivate';
+import PrivateRoute from './shared/Navigation/Routes/PrivateRoute';
+import Dashboard from './Pages/User/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -29,6 +31,10 @@ function App() {
             path='/auth/account-activate/:token'
             element={<AccountActivate />}
           />
+
+          <Route path='/' element={<PrivateRoute />}>
+            <Route path='dashboard' element={<Dashboard />} />
+          </Route>
           <Route path='*' element={<Navigate to='/' replace />} />
         </Routes>
       </div>
